@@ -2,6 +2,8 @@
 
 Brief description of what this skill does.
 
+For humans browsing the repository, add the matching user-facing explanation to `README.md`.
+
 ## Trigger
 
 Describe when Claude should activate this skill.

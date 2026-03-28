@@ -5,3 +5,6 @@
 .env
 node_modules/
 tasks/
+docs/
+.claude/
+.agents/

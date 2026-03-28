@@ -44,9 +44,10 @@ Show the exact proposed diff or a concise preview before editing when the change
 
 Create the smallest useful package:
 
+- `<skill-name>/README.md`
 - `<skill-name>/SKILL.md`
 - optional `references/` with one focused file if helpful
-- README table entry
+- root README skills-table entry
 
 Use kebab-case for the directory and the `name:` frontmatter. Keep the first version narrow and practical.
 

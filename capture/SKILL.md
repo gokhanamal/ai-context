@@ -47,7 +47,7 @@ Do not activate continuously or speculatively. This skill is a checkpoint helper
      3. Ignore for now
 6. If the user approves a write, read `references/edit-policy.md` and follow the target-specific rules.
    - Existing skill: apply append-only updates directly after approval, but preview structural changes first.
-   - New skill: create a minimal skill package plus a README entry.
+   - New skill: create a minimal skill package plus a per-skill `README.md` and a root `README.md` entry.
    - Lessons: append one short rule to `tasks/lessons.md`.
    - Solution docs: create `docs/solutions/` on demand and write one compact solution document.
 7. Keep the update focused.
