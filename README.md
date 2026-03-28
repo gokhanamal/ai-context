@@ -34,7 +34,7 @@ Add a skill to Claude Code by placing its directory under your Claude Code skill
 
 | Skill | Description |
 |-------|-------------|
-| — | No skills yet. Copy `_template/` to get started! |
+| [github-actions](github-actions/) | Create, edit, debug, and optimize GitHub Actions workflows and custom actions |
 
 ## Contributing
 
