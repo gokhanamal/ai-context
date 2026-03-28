@@ -6,14 +6,30 @@ A collection of custom skills for AI coding agents. Works with any platform that
 
 ### Claude Code
 
+Install directly from GitHub:
+
 ```bash
 claude plugin install --source github gokhanamal/skills
 ```
 
-Or test locally:
+Add the repository as a marketplace inside Claude Code:
+
+```text
+/plugin marketplace add gokhanamal/skills
+/plugin install gokhanamal-skills@gokhanamal-plugins
+```
+
+Test the marketplace locally from the repo root:
+
+```text
+/plugin marketplace add .
+/plugin install gokhanamal-skills@gokhanamal-plugins
+```
+
+Or load the plugin directory directly from the repo root:
 
 ```bash
-claude --plugin-dir ./skills
+claude --plugin-dir .
 ```
 
 ### OpenAI Codex
@@ -28,7 +44,8 @@ Copy any skill directory (e.g. `github-actions/`) into your agent's skills folde
 
 ```
 skills/
-├── .claude-plugin/         # Claude Code plugin manifest
+├── .claude-plugin/         # Claude Code plugin manifest and marketplace catalog
+│   ├── marketplace.json
 │   └── plugin.json
 ├── .codex-plugin/          # OpenAI Codex plugin manifest
 │   └── plugin.json

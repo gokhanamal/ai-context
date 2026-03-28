@@ -1,0 +1,36 @@
+{
+  "name": "gokhanamal-plugins",
+  "owner": {
+    "name": "Gokhan Namal"
+  },
+  "metadata": {
+    "description": "Reusable skills and workflows for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "gokhanamal-skills",
+      "source": "./",
+      "description": "Reusable skills for GitHub Actions workflows and knowledge capture",
+      "author": {
+        "name": "Gokhan Namal"
+      },
+      "homepage": "https://github.com/gokhanamal/skills",
+      "repository": "https://github.com/gokhanamal/skills",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "github-actions",
+        "knowledge-capture",
+        "claude-code"
+      ],
+      "category": "Productivity",
+      "tags": [
+        "skills",
+        "automation",
+        "github-actions",
+        "knowledge-capture"
+      ]
+    }
+  ]
+}
