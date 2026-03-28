@@ -50,6 +50,7 @@ skills/
 | Skill | Description |
 |-------|-------------|
 | [github-actions](github-actions/) | Create, edit, debug, and optimize GitHub Actions workflows and custom actions |
+| [knowledge-capture-recommender](knowledge-capture-recommender/) | Recommend whether reusable knowledge should update an existing skill, create a new skill, add to lessons, add to solution docs, or be ignored, then apply approved updates safely |
 
 ## Adding a New Skill
 
