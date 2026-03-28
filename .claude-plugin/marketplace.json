@@ -4,14 +4,14 @@
     "name": "Gokhan Namal"
   },
   "metadata": {
-    "description": "Reusable skills and workflows for Claude Code",
+    "description": "Open source skills and workflows for Claude Code",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "gokhanamal-skills",
       "source": "./",
-      "description": "Reusable skills for GitHub Actions workflows and knowledge capture",
+      "description": "Reusable skills for GitHub Actions workflows and reusable knowledge capture",
       "author": {
         "name": "Gokhan Namal"
       },
@@ -21,7 +21,7 @@
       "keywords": [
         "skills",
         "github-actions",
-        "knowledge-capture",
+        "capture",
         "claude-code"
       ],
       "category": "Productivity",
@@ -29,7 +29,7 @@
         "skills",
         "automation",
         "github-actions",
-        "knowledge-capture"
+        "capture"
       ]
     }
   ]

@@ -1,6 +1,37 @@
 {
   "name": "gokhanamal-skills",
   "version": "1.0.0",
-  "description": "A collection of custom skills for AI coding agents",
-  "skills": "./"
+  "description": "Open source skills for Claude Code and OpenAI Codex",
+  "author": {
+    "name": "Gokhan Namal",
+    "url": "https://github.com/gokhanamal"
+  },
+  "homepage": "https://github.com/gokhanamal/skills",
+  "repository": "https://github.com/gokhanamal/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "github-actions",
+    "capture",
+    "codex",
+    "claude-code"
+  ],
+  "skills": "./plugin-skills/",
+  "interface": {
+    "displayName": "Gokhan Skills",
+    "shortDescription": "Reusable open source skills for agent workflows",
+    "longDescription": "A curated open source bundle of skills for GitHub Actions workflows and reusable knowledge capture across Claude Code and Codex.",
+    "developerName": "Gokhan Namal",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/gokhanamal/skills",
+    "defaultPrompt": [
+      "Help me create or debug a GitHub Actions workflow",
+      "Capture this reusable fix as a skill, lesson, or solution"
+    ],
+    "brandColor": "#1F6FEB",
+    "screenshots": []
+  }
 }

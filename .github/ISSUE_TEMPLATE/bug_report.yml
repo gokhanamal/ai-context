@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a problem with a skill, manifest, validation check, or installation flow.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Choose the closest match.
+      options:
+        - capture
+        - github-actions
+        - plugin packaging
+        - documentation
+        - validation workflow
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug and the impact.
+      placeholder: The skill selected the wrong workflow and suggested an invalid command.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include prompts, files, or commands when relevant.
+      placeholder: |
+        1. Invoke the skill with...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The skill should have...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Agent platform and version, if known.
+      placeholder: Claude Code, Codex, or manual install
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, logs, or references that help explain the issue.
