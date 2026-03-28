@@ -6,7 +6,7 @@ Use these examples to keep the interaction concrete and low-noise.
 
 Manual invocation:
 
-- "Use knowledge-capture-recommender for this fix."
+- "Use capture for this fix."
 
 Keyword moments:
 

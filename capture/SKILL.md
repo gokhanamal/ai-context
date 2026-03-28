@@ -1,9 +1,9 @@
 ---
-name: knowledge-capture-recommender
-description: This skill should be used when a reusable insight, command, fix, or decision may need to be captured as a skill update, a new skill, a lesson, or a solution document. It is especially useful after confirmed fixes, finalized decisions, explicit "remember this" moments, or corrected CLI usage.
+name: capture
+description: This skill should be used when a reusable insight, command, fix, or decision may need to be captured into the right artifact: an existing skill, a new skill, a lesson, or a solution document. It is especially useful after confirmed fixes, finalized decisions, explicit "remember this" moments, or corrected CLI usage.
 ---
 
-# Knowledge Capture Recommender
+# Capture
 
 Detect when a recent moment is reusable knowledge, recommend the best place to capture it, ask for approval, and then update the approved destination safely.
 
