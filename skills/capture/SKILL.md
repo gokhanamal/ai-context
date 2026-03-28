@@ -1,6 +1,6 @@
 ---
 name: capture
-description: This skill should be used when a reusable insight, command, fix, or decision may need to be captured into the right artifact: an existing skill, a new skill, a lesson, or a solution document. It is especially useful after confirmed fixes, finalized decisions, explicit "remember this" moments, or corrected CLI usage.
+description: "This skill should be used when a reusable insight, command, fix, or decision may need to be captured into the right artifact: an existing skill, a new skill, a lesson, or a solution document. It is especially useful after confirmed fixes, finalized decisions, explicit 'remember this' moments, or corrected CLI usage."
 ---
 
 # Capture
