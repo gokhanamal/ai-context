@@ -13,6 +13,7 @@ It can:
 - open or boot the simulator
 - build and launch the app
 - inspect the visible UI hierarchy
+- auto-resolve visible element centers with the bundled helper script
 - tap, type, scroll, and swipe through the app
 - capture screenshots and simulator logs
 
@@ -33,4 +34,5 @@ The skill keeps simulator automation structured and safe. It verifies that `xcod
 ## Files
 
 - `SKILL.md` - the agent-facing simulator workflow
+- `scripts/ui_helper.py` - local helper that resolves visible elements from `snapshot-ui`, taps their centers, and retries fallbacks
 - `references/command-recipes.md` - concrete `xcodebuildmcp` command patterns for discovery, launch, UI automation, screenshots, logs, and recovery

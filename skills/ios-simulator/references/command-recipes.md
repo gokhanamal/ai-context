@@ -2,6 +2,49 @@
 
 Use these recipes when the `ios-simulator` skill needs exact `xcodebuildmcp` commands instead of higher-level guidance.
 
+## Fast Local Helper
+
+When this repository is available locally, prefer the bundled helper for visible taps before doing manual coordinate math.
+
+Find likely matches:
+
+```bash
+python3 skills/ios-simulator/scripts/ui_helper.py \
+  find \
+  --simulator-id <SIMULATOR_ID> \
+  --contains "Automatic only"
+```
+
+Tap a visible element and retry if the UI does not change:
+
+```bash
+python3 skills/ios-simulator/scripts/ui_helper.py \
+  tap \
+  --simulator-id <SIMULATOR_ID> \
+  --label "Done" \
+  --expect-change
+```
+
+Tap a substring match when the full label is long:
+
+```bash
+python3 skills/ios-simulator/scripts/ui_helper.py \
+  tap \
+  --simulator-id <SIMULATOR_ID> \
+  --contains "BMW M3 Competition" \
+  --expect-change
+```
+
+Use `--dry-run` to resolve the chosen target without tapping:
+
+```bash
+python3 skills/ios-simulator/scripts/ui_helper.py \
+  tap \
+  --simulator-id <SIMULATOR_ID> \
+  --contains "Filters active" \
+  --dry-run
+```
+
 ## Project Discovery
 
 Discover candidate projects from the current repo:

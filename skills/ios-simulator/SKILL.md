@@ -3,7 +3,7 @@ name: ios-simulator
 description: Drive an iOS Simulator from plain-language instructions by discovering the project, launching the app, inspecting the visible UI, and interacting with elements through xcodebuildmcp. Use when the user wants an agent to open Simulator, navigate screens, tap buttons, type into fields, scroll, or capture screenshots and logs.
 argument-hint: "[task]"
 disable-model-invocation: true
-allowed-tools: "Read, Bash(xcodebuildmcp *), Bash(rg *), Bash(find *), Bash(ls *), Bash(pwd), Bash(test *), Bash(sed *)"
+allowed-tools: "Read, Bash(xcodebuildmcp *), Bash(python3 skills/ios-simulator/scripts/ui_helper.py *), Bash(rg *), Bash(find *), Bash(ls *), Bash(pwd), Bash(test *), Bash(sed *)"
 ---
 
 # iOS Simulator
@@ -23,9 +23,10 @@ This is a manual workflow skill. Treat every simulator action as deliberate, ver
 5. List, boot, or open the simulator only as needed.
 6. Prefer `xcodebuildmcp simulator build-and-run` when the app needs to be launched.
 7. Inspect the current screen with `snapshot-ui` before the first interaction and after every navigation-changing action.
-8. Prefer taps by accessibility `id` or `label`. Use coordinates only after a fresh UI snapshot confirms the target is visible.
-9. Focus a field before using `type-text`.
-10. Capture screenshots or logs when the user asks for proof or when debugging is needed.
+8. In this repo, prefer `python3 skills/ios-simulator/scripts/ui_helper.py tap ...` for repeated tap flows so the helper can resolve centers and retry fallbacks automatically.
+9. Prefer taps by accessibility `id` or `label`. Use coordinates only after a fresh UI snapshot confirms the target is visible.
+10. Focus a field before using `type-text`.
+11. Capture screenshots or logs when the user asks for proof or when debugging is needed.
 
 ## Workflow
 
@@ -67,8 +68,10 @@ This is a manual workflow skill. Treat every simulator action as deliberate, ver
 ### 5. Navigate And Interact
 
 - Call `simulator snapshot-ui` before the first tap, type, swipe, or scroll.
+- If `skills/ios-simulator/scripts/ui_helper.py` is available, use it as the default fast path for taps on visible elements.
 - Match the requested UI target using visible accessibility ids or labels first.
 - After any action that could change layout or navigation, run `snapshot-ui` again before the next interaction.
+- For navigation-changing or toggle actions, prefer helper invocations with `--expect-change` so failed taps retry automatically.
 - For text entry:
   1. focus the field with a tap
   2. verify focus if the UI output changes
@@ -106,4 +109,4 @@ This is a manual workflow skill. Treat every simulator action as deliberate, ver
 
 ## Reference
 
-For exact command patterns and recovery recipes, see [references/command-recipes.md](references/command-recipes.md).
+For exact command patterns, helper usage, and recovery recipes, see [references/command-recipes.md](references/command-recipes.md).
